@@ -1,8 +1,7 @@
 Readme
 
-Aerodynamic subsystem:
-
-This code is for the Aerodynamic subsystem optimization Main code: Aviary, OpenMDAO Extra CFD solver: FlightStream 2025.1 AI statement: These codes are generated with the assistance of ChatGPT 5.1
+This code is for the Aerodynamic subsystem optimization Main code: Aviary, OpenMDAO Extra CFD solver: FlightStream 2025.1 
+AI statement: These codes are generated with the assistance of ChatGPT 5.1
 
 Tech setup for this version: Please follow the steps in the order listed.
 
@@ -17,4 +16,4 @@ Save these files to your Aviray file in a suitable place. (Eg: C/User/Aviary/Sub
 Update several file paths in GeometryCreator.py, FSpolarAeroComp.py, geo_oas_opt_FSpolar.py
 Run GeometryCreator.py first to generate a CAD model for FLightStream.
 Run FSpolarAeroComp.py to generate a high-fidelity aerodynamics polar.
-Run geo_oas_opt_FSpolar.py, which is already combined with Geometry Optimization.
+Run geo_oas_opt_FSpolar.py to get optimization results.
