@@ -58,7 +58,6 @@ def compute_emissions(prob, total_fuel_burn, make_plots=True):
 
     def HC(f):
         return 0.0317 * f ** (-1.008)
-    
     def CO(f):
         return 0.12 * f ** (-1.96)
     def NOx(f):
@@ -85,23 +84,20 @@ def compute_emissions(prob, total_fuel_burn, make_plots=True):
     nvPM_total = np.trapezoid(nvPM_rate, time_all_s) / 1000
 
     total_fuel_kg = total_fuel_burn*0.453592
-    # ===============================
-    # CO₂ EMISSIONS (kg)
-    # ===============================
+
     CO2_total = total_fuel_kg * 3.16
 
     results = {
-        "Total Fuel": total_fuel_kg,
-        "HC": HC_total,
-        "CO": CO_total,
-        "NOx": NOx_total,
-        "nvPM": nvPM_total,
-        "CO2": CO2_total,
+        "HC_kg": HC_total,
+        "CO_kg": CO_total,
+        "NOx_kg": NOx_total,
+        "nvPM_kg": nvPM_total,
+        "CO2_kg": CO2_total,
     }
 
     print("\n===== TOTAL MISSION EMISSIONS =====")
     for k, v in results.items():
-        print(f"{k}: {float(v):.3f} kg")
+        print(f"{k}: {v:.3f} kg")
     print("===================================\n")
 
     if make_plots:
@@ -135,7 +131,6 @@ def compute_emissions(prob, total_fuel_burn, make_plots=True):
         plt.plot(time_all_s, CO_rate, label="CO")
         plt.xlabel("Time (s)")
         plt.ylabel("Emission Rate (g/s)")
-        plt.title("NOx and CO Emissions Rates")
         plt.grid(True)
         plt.legend()
         plt.tight_layout()
