@@ -2,7 +2,7 @@ Readme
 
 
 Baseline Mission Run:
-To run the baseline mission using the advanced single aisle aircraft, download baseline_updated.py file and emissions.py. Then run with either the SLSQP or IPOPT solvers for fuel burn and emissions.
+To run the baseline mission using the advanced single aisle aircraft,  download the advanced_single_aisle_baseline_FLOPS.csv file and add it to the folder within Aviary where the advanced_single_aisle_FLOPS.csv file is located. Then download baseline_updated.py file and emissions.py. Then run with either the SLSQP or IPOPT solvers for fuel burn and emissions.
 
 
 Geometry Subsystem Optimization:
