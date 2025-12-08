@@ -1,5 +1,19 @@
 Readme
 
+Baseline Mission Run:
+To run the baseline mission using the advanced single aisle aircraft, download baseline_updated.py file and emissions.py. Then run with either the SLSQP or IPOPT solvers for fuel burn and emissions.
+
+Geometry Subsystem Optimization:
+To run the geometry subsystem optimization, download geometry_updated.py and emissions.py, then run with either SLSQP or IPOPT solvers. This will optimize the aircraft's geometry for the base line mission. 
+Design variables include:
+- Wing aspect ratio, area, sweep, taper, and dihedral
+- Fuselage length, max width, and max height
+- Horizontal tail area, aspect ratio, and taper ratio
+
+Mass/Cost Subsystem:
+
+Mission Subsystem: 
+
 This code is for the Aerodynamic subsystem optimization Main code: Aviary, OpenMDAO Extra CFD solver: FlightStream 2025.1 
 AI statement: These codes are generated with the assistance of ChatGPT 5.1
 
