@@ -346,29 +346,10 @@ outputs = {
     "V tail wetted area": prob.get_val(av.Aircraft.VerticalTail.WETTED_AREA)
 }
 
-print("=== REQUIRED OAS STRUCTURAL INPUTS ===")
+print("=== OUTPUTS ===")
 for k, v in outputs.items():
     print(f"{k:20s} : {v}")
-
-print("\nSaved. You can now pass these into your OAS structural optimization script.\n")
 
 # Emissions Estimation
 from emissions import compute_emissions
 emissions = compute_emissions(prob, total_fuel_burn, make_plots=True)
-
-# Compute Strucutre
-#from structure import compute_structure
-#structural_results = compute_structure(oas_inputs,plot_results=False)
-
-#from carpet_plot import carpet_plot
-"""
-carpet_plot(prob,
-            x_var=av.Aircraft.Wing.AREA,
-            y_var=av.Aircraft.Wing.ASPECT_RATIO,
-            output_var='Vh',
-            x_range=(500, 2000),
-            y_range=(0, 50),
-            xlabel='Wing Area [ft^2]',
-            ylabel='Aspect Ratio',
-            title='Fuel Burn Carpet Plot')
-"""
