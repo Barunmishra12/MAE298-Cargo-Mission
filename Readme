@@ -2,11 +2,13 @@ Readme
 
 
 Baseline Mission Run:
-To run the baseline mission using the advanced single aisle aircraft,  download the advanced_single_aisle_baseline_FLOPS.csv file and add it to the folder within Aviary where the advanced_single_aisle_FLOPS.csv file is located. Then download baseline_updated.py file and emissions.py. Then run with either the SLSQP or IPOPT solvers for fuel burn and emissions.
+To run the baseline mission using the advanced single aisle aircraft, download advanced_single_aisle_baseline_FLOPS.csv file and add it to the folder within Aviary where advanced_single_aisle_FLOPS.csv file is located.
+This should be located with the following extension: aviary\models\aircraft\advanced_single_aisle. This model has been updated to include 52,000 lbm of cargo and has all of the internal passenger features removed.
+Then download baseline_updated.py file and emissions.py. Then run with either the SLSQP or IPOPT solvers for fuel burn and emissions.
 
 
 Geometry Subsystem Optimization:
-To run the geometry subsystem optimization, download the advanced_single_aisle_baseline_FLOPS.csv file and add it to the folder within Aviary where the advanced_single_aisle_FLOPS.csv file is located. Then download geometry_updated.py and emissions.py, then run with either SLSQP or IPOPT solvers. This will optimize the aircraft's geometry for the base line mission. 
+To run the geometry subsystem optimization, follow the same steps as in the baseline mission run to download advanced_single_aisle_baseline_FLOPS.csv. Then download geometry_updated.py and emissions.py, then run with either SLSQP or IPOPT solvers. This will optimize the aircraft's geometry for the base line mission. 
 Design variables include:
 - Wing aspect ratio, area, sweep, taper, and dihedral
 - Fuselage length, max width, and max height
