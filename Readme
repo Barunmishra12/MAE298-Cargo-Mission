@@ -8,7 +8,8 @@ Then download baseline_updated.py file and emissions.py. Then run with either th
 
 
 Geometry Subsystem Optimization:
-To run the geometry subsystem optimization, follow the same steps as in the baseline mission run to download advanced_single_aisle_baseline_FLOPS.csv. Then download geometry_updated.py and emissions.py, then run with either SLSQP or IPOPT solvers. This will optimize the aircraft's geometry for the base line mission. 
+To run the geometry subsystem optimization, follow the same steps as in the baseline mission run to download advanced_single_aisle_baseline_FLOPS.csv. Then download geometry_updated.py and emissions.py, then run with either SLSQP or IPOPT solvers. 
+This will optimize the aircraft's geometry for the base line mission. 
 Design variables include:
 - Wing aspect ratio, area, sweep, taper, and dihedral
 - Fuselage length, max width, and max height
