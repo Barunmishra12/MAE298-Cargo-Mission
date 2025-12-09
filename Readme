@@ -17,8 +17,15 @@ Design variables include:
 
 
 Mass/Cost Subsystem:
-To run the cost subsystem, first follow the same steps as in the baseline mission run to download the advanced_single_aisle_baseline_FLOPS.csv. Then download the four cost subsystem python files
-
+- To run the cost subsystem, first follow the same steps as in the baseline mission run to download the advanced_single_aisle_baseline_FLOPS.csv. Then download the four cost subsystem python files jet_cost_variable.py, jet_cost.py, 
+jet_cost_builder.py and jet_cost_run.py.
+- If running the same example as in setup then use your prefered choice of solver either SLSQP or IPOPT and run the jet_cost_run.py script to get the cost estimations for the advance single aisle.
+- If planning to run the cost system for a different example make sure to follow the same steps in baseline run to first download and store the newer aircraft data and then update the Design inputs mentioned below as per the newer
+aircraft scaling requirments. 
+Desing inputs include: 
+- Manufacturing economics inputs such as labor rate, labor scaling factor, productivity factor, and annual utilization
+- Operating cost parameter inputs such as fuel price per gallon, crew cost, insurance rates, storage cost, and depreciation period
+- Maintenance and overhaul inputs such as overhaul cost rate, overhaul interval, and hull/liability insurance values
 
 Mission Subsystem: 
 
