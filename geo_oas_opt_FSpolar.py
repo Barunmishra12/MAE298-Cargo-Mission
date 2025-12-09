@@ -428,60 +428,6 @@ print(f"Total fixed operating cost:      {fixed_cost:,.3f} USD/year")
 
 print("\n======================================================\n")
 
-'''
-outputs.update({
-"flyaway_cost [USD]": float(flyaway_cost),
-"consumer_price [USD]": float(consumer_price),
- "total_operating_cost_per_hr [USD/hr]": float(toc_per_hr),
-"variable_cost_per_hr [USD/hr]": float(var_per_hr),
-"fixed_cost_annual [USD/yr]": float(fixed_annual),
-"airframe_mfg_cost [USD]": float(airframe_mfg),
-"engine_total_cost [USD]": float(engine_total),
-"direct_mfg_cost [USD]": float(direct_mfg),
-"ga_overhead [USD]": float(ga_overhead),
-"total_mfg_cost [USD]": float(total_mfg),
-"mfg_labor_hours [hr]": float(mfg_labor_hrs),
-"mfg_labor_cost [USD]": float(mfg_labor_cost),
-})
-
-print("=== REQUIRED OAS STRUCTURAL INPUTS + COST ===")
-#for k, v in outputs.items():
-#    print(f"{k:35s} : {v}")
-
-print("\n====== COST SUMMARY (JetCost) ======")
-# ----- Labor Summary -----
-print("----- Labor Summary -----")
-print(f"Manufacturing labor hours:       {lab_hr:,.3f} hr")
-print(f"Manufacturing labor cost:        {lab_cost:,.3f} USD")
-
-# ----- Manufacturing Breakdown -----
-print("\n----- Manufacturing Breakdown -----")
-print(f"Airframe manufacturing:          {airframe_man:,.3f} USD")
-print(f"Engine total:                    {engine_tot:,.3f} USD")
-print(f"Auxiliary systems (avionics/APU):{aux_systems:,.3f} USD")
-print(f"Direct manufacturing cost:       {direct_man:,.3f} USD")
-print(f"General & admin overhead:        {ga_overhead:,.3f} USD")
-print(f"Total manufacturing cost:        {total_man:,.3f} USD")
-
-    # ----- Price & Total Economics -----
-print("\n----- Price & Total Economics -----")
-print(f"Base aircraft price (flyaway):   {flyaway:,.3f} USD")
-print(f"Final aircraft price (consumer): {consumer_price:,.3f} USD")
-    
-
-# ----- Operating Cost Items -----
-print("\n----- Operating Cost Items -----")
-print(f"Total uplifted fuel cost:        {(fuel_mass/fuel_density)*fuel_price:,.3f} USD")
-print(f"Fuel cost per mission:           {burnt_fuel_cost:,.3f} USD")
-print(f"Total operating cost:            {toc:,.3f} USD/hr")
-print(f"Annual crew cost:                {crew_annual:,.3f} USD/year")
-print(f"Total fixed operating cost:      {fixed_cost:,.3f} USD/year")
-print("====================================\n")
-
-#print("=== REQUIRED OAS STRUCTURAL INPUTS ===")
-#for k, v in outputs.items():
-#    print(f"{k:20s} : {v}")
-'''
 print("\nSaved. You can now pass these into your OAS structural optimization script.\n")
 
 # Emissions Estimation (pass total fuel burn to include CO2 calc)
@@ -489,5 +435,5 @@ from emissions import compute_emissions
 emissions = compute_emissions(prob, total_fuel_burn, make_plots=True)
 
 # Compute Strucutre
-#from structure import compute_structure
-#structural_results = compute_structure(oas_inputs,plot_results=False)
+from structure import compute_structure
+structural_results = compute_structure(oas_inputs,plot_results=False)
