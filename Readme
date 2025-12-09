@@ -17,6 +17,7 @@ Design variables include:
 
 
 Mass/Cost Subsystem:
+To run the cost subsystem, first follow the same steps as in the baseline mission run to download the advanced_single_aisle_baseline_FLOPS.csv. Then download the four cost subsystem python files
 
 
 Mission Subsystem: 
